@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css?family=Sono");
+
+:root {
+  --text-color: #111418;
+  --alt-text-color: #f6f7f9;
+  --block-background: #184a90;
+  --alt-block-background: #f6f7f9;
+  --block-border: #edeff2;
+  --alt-block-border: #dce0e5;
+  --block-padding: 1em;
+  --highlight-background: #8abbff;
+  --highlight-border: #c5cbd3;
+  --button-background: #f5498b;
+  --alt-row-background: #c5cbd3;
+}
+
+body {
+  background-color: var(--block-background);
+  background-image: url("./main-bg.webp");
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-blend-mode: screen;
+  color: var(--text-color);
+  font-family: Sono, sans-serif;
+  font-size: 1.25em;
+  line-height: 165%;
+  margin: 0 auto;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+/* PAGE LAYOUT 
+Consistant design for each page layout block. 
+*/
+
+header,
+footer {
+  background-color: var(--block-background);
+  color: var(--alt-text-color);
+  border-color: var(--block-border);
+  border-style: solid;
+  border-width: 1px;
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin: 1rem auto;
+  padding: var(--block-padding);
+  text-align: center;
+}
+header {
+  border-left: 0;
+  border-right: 0;
+  margin-bottom: 0;
+}
+footer {
+  border-width: 1px 0 0 0;
+  font-weight: normal;
+}
+
+main {
+  background-color: var(--alt-block-background);
+  border-width: 1px;
+  border-style: solid none;
+  border-color: var(--block-border);
+  color: var(--text-color);
+  padding: 1ch;
+}
+main table {
+  margin: 0 auto;
+}
+/* NAVIGATION
+Simple changes to make anchors look like buttons. 
+*/
+
+nav {
+  background: transparent;
+  backdrop-filter: blur(15px);
+}
+nav a {
+  display: inline-block;
+  padding: calc(var(--block-padding) / 2);
+  background-color: var(--button-background);
+  border: var(--block-border);
+  color: var(--text-color);
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin: 1ch;
+  margin-left: 0;
+  text-decoration: none;
+  vertical-align: middle;
+}
+nav a:hover {
+  background-color: var(--highlight-background);
+  border: var(--highlight-border);
+}
+
+/* TABLE */
+
+table {
+  border-collapse: collapse;
+}
+caption {
+  font-variant: small-caps;
+}
+thead {
+  background-color: var(--block-background);
+  color: var(--alt-text-color);
+}
+tr td,
+tr th {
+  border: 1px solid var(--alt-block-border);
+  border-left: 0;
+  border-right: 0;
+  padding: calc(var(--block-padding) / 2);
+}
+tr:nth-child(even) {
+  background-color: var(--alt-row-background);
+}
+th {
+  text-align: left;
+}
+
+/* FORM */
+form,
+input,
+select,
+button {
+  font-family: Sono, sans-serif;
+}
+input,
+select,
+button {
+  padding: calc(var(--block-padding) / 2);
+  font-size: 1rem;
+}
+
+label {
+  display: block;
+  margin: 0.5rem 0;
+}
+
+button {
+  background-color: var(--button-background);
+  border: var(--block-border);
+}
+button:hover {
+  background-color: var(--highlight-background);
+  border: var(--highlight-border);
+}
+:focus {
+  background-color: transparent;
+  border: var(--highlight-border);
+}
+
+::placeholder {
+  opacity: 0.8;
+}
