@@ -9,18 +9,18 @@ Developer: [Melanie Archer](twobanjos.com)
 
 In the `backend` directory, run:
 
-### `npm install`
-### `npm start`
+ `npm install`
+ `npm start`
 
 In the `frontend` directory, run:
 
-### `npm install`
-### `npm start`
+ `npm install`
+ `npm start`
 
 
 Open [http://localhost:8000](http://localhost:8000) to view in the browser.
 
-### `npm run build`
+ `npm run build`
 
 * Builds the app for production to the `build` folder.
 * Bundles React in production mode and optimizes the build.
